@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <style>
+    body {
+      font-family: "Roboto", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      background-color: #04044a;
+    }
+
+    .title-container {
+      height: 408px;
+      background-image: url(assets/background.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    .title-wrapper {
+      width: 700px;
+      margin: 0 auto;
+    }
+
+    .title {
+      margin: 0;
+      padding-top: 100px;
+      text-align: left;
+      font-size: 48px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 15px;
+    }
+
+    .content-container{
+      width: 700px;
+      position: absolute;
+      left: 50%;
+      top: 168px;
+      transform: translate(-50%, 0); 
+      padding: 20px;
+    }
+
+    .todolist {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .todolist-title {
+      color: #fff;
+      letter-spacing: 4px;
+    }
+
+    .input-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 40px;
+      padding: 12px;
+      background-color: #070770;
+      border: 1px solid #36365f;
+    }
+
+    .input {
+      background: transparent;
+      height: 40px;
+      width: 500px;
+      margin: 20px 0;
+      font-size: 20px;
+      color: #fff;
+      border: none;
+    }
+
+    .input:focus{
+      outline: none;  
+    }
+
+    .list {
+      padding: 0;
+      margin: 20px 0;
+      font-size: 20px;
+      list-style: none;
+      color: #fff;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 40px;
+      padding: 12px;
+      background-color: #070770;
+      border: 1px solid #36365f;
+    }
+
+    .item-checkbox {
+      cursor: pointer;
+    }
+
+    .item-name {
+      margin-left: 6px;
+    }
+
+    button {
+      cursor: pointer;
+      padding: 5px;
+      border: 1px solid #fff;
+      border-radius: 3px;
+    }
+
+    .task-done {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+  <header></header>
+  <main class="main">
+      <div class="container">
+        <div class="title-container">
+          <div class="title-wrapper">
+            <h1 class="title">Todo</h1>
+          </div>
+        </div>
+        <div class="content-container">
+          <div class="todolist">
+            <h2 class="todolist-title">
+              Learning
+            </h2>
+            <button type="button" class="button-delete-list">Delete list</button>
+          </div>
+
+          <div class="input-container">
+            <input type="text" class="input" placeholder="Create a new todo...">
+            <button type="button" class="button-add-item">Add</button>
+          </div>
+          <ul class="list">
+            <li class="item">
+              <div>
+                <input type="checkbox" class="item-checkbox"><span class="item-name">Data structures</span>
+              </div>
+              <div>
+                <button type="button" class="button-edit">Edit</button>
+                <button type="button" class="button-delete-item">Del</button>
+              </div>
+            </li>
+            <li class="item">
+              <div>
+                <input type="checkbox" class="item-checkbox"><span class="item-name">SOLID, KISS, DRY </span>
+              </div>
+              <div>
+                <button type="button" nclass="button-edit">Edit</button>
+                <button type="button" class="button-delete-item">Del</button>
+              </div>
+            </li>
+            <li class="item">
+              <div>
+                <input type="checkbox" class="item-checkbox"><span class="item-name">Event loop </span>
+              </div>
+              <div>
+                <button type="button" class="button-edit">Edit</button>
+                <button type="button" class="button-delete-item">Del</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </main>
+  <footer></footer>
+
+  <script>
+    const tasksList = document.querySelector('.content-container');
+    const buttonDeleteList = document.querySelector('.button-delete-list');
+    const todolistItem = document.querySelector('.item');
+
+    function deleteList () {
+      tasksList.remove();
+    };
+
+    function deleteItem (event) {
+      if(event.target.className == 'button-delete-item'){
+        event.target.parentElement.parentElement.remove();
+      }
+    };
+
+    function doneTask (event) {
+      if(event.target.className == 'item-checkbox'){
+        event.target.parentElement.classList.toggle('task-done');
+      }
+    ;}
+
+    buttonDeleteList.addEventListener('click', deleteList);
+    tasksList.addEventListener('click', deleteItem);
+    tasksList.addEventListener('click', doneTask);
+
+  </script>
+</body>
+</html>
