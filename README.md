@@ -9,10 +9,10 @@ Creating a user interface: designing a page for creating a to-do list, including
 		Todo Input + Button Add
 		Todo List
 			Todo Item
-				Add
+				Checkbox
 				Text
-				Edit
-				Delete
+				Button Edit
+				Button Delete
 				
 
 Actions:
