@@ -3,6 +3,8 @@
 **FRONTEND**
 
 Creating a user interface: designing a page for creating a to-do list, including components:
+<img width="305" alt="image" src="https://user-images.githubusercontent.com/72251052/210534086-61b7b1d0-6233-4ba8-93f7-cf505f7c2368.png">
+
 	Todo Wrapper
 		Title
 		Todo Input + Button Add
