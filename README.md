@@ -14,6 +14,8 @@ Creating a user interface: designing a page for creating a to-do list, including
 				Edit
 				Delete
 
+<img width="160" alt="image" src="https://user-images.githubusercontent.com/72251052/210534295-0757d4d5-0b5c-4d0a-9b6d-66b1b9c0c4ad.png">
+
 Actions:
 	Adding a task
 	Сompleted task
