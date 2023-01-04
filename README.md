@@ -44,16 +44,25 @@ HTTP methods:
 	PUT - edit a task in ToDo list (200 (OK), 204 (No Content), 404 (Not Found))
 
 	DELETE - delete a task from ToDo list (200 (OK), 204 (No Content), 404 (Not Found)
+
+
 	
-	GET/todolists/:id 
 	
+GET/todolists/:id 
 	
 POST/todolists
+
 DELETE/todolists/:id 
 
+
+
 GET/todolists/:id/items/:id
+
 POST/todolists/:id/items/:id
+
 PUT/todolists/:id/items/:id
+
 DELETE/todolists/:id/items/:id
+
 
 	
