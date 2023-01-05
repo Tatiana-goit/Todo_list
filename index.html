@@ -178,13 +178,11 @@
   </main>
   <footer></footer>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
   <script>
-    const tasksList = document.querySelector('.content-container');
-    const buttonDeleteList = document.querySelector('.button-delete-list');
-    const todolistItem = document.querySelector('.item');
-
     function deleteList () {
-      tasksList.remove();
+      $('.content-container').remove();
     };
 
     function deleteItem (event) {
@@ -199,9 +197,9 @@
       }
     ;}
 
-    buttonDeleteList.addEventListener('click', deleteList);
-    tasksList.addEventListener('click', deleteItem);
-    tasksList.addEventListener('click', doneTask);
+    $('.button-delete-list').on('click', deleteList);
+    $('.content-container').on('click', deleteItem);
+    $('.content-container').on('click', doneTask);
 
   </script>
 </body>
