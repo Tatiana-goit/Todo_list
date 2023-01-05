@@ -16,14 +16,17 @@ Creating a user interface: designing a page for creating a to-do list, including
 				
 
 Actions:
+	Delete todo List
 
-	Adding a task
+	Add todo List
 
-	Сompleted task
+	Add a task
 
-	Deleting a task
+	Сomplete a task
 
-	Editing a task
+	Delete a task
+
+	Edit a task
 
 
 
